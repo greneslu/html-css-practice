@@ -1,0 +1,287 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+.body{
+    font-family: Microsoft JhengHei;
+}
+.wrap{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.header-top{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f6f6f6;
+}
+.facebook{      /*fb區塊整體外框*/
+    padding-right: 8px;
+    border-right: 1px solid #cccccc;
+}
+.twitter{       /*twitter區塊整體外框*/
+    padding-left: 5px;
+    padding-right: 8px;
+}
+.header-top li a{
+    text-decoration: none;
+    font-size: 15px;
+}
+.header-top li img{     /***圖片與文字平行的關鍵 讓兩者靠在一起 再做微調***/
+    float: left;
+    margin-right: 5px;
+}
+.twitter span{
+    color: deepskyblue;
+}
+.header-top span:hover{
+    text-decoration: underline;
+}
+
+
+
+.header{            /*外層*/
+    display: flex; 
+    justify-content: space-between;     /*主軸靠邊分散*/
+    align-items: center;                /*交錯軸置中*/
+}
+.header h1 a{       /***logo設計 學習隱藏文字***/
+    background-image: url(../02_CSS/img90/logo.png);
+    width: 176px;
+    height: 50px;
+    display: block;     /***a連結為行內元素 需改變成區塊***/
+    margin-left: 15px;
+    /***以下為業界常用隱藏文字方法 white-space是把文字推到第一排上面***/
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu{              /*logo右方 讓三個選項使用flex變成並排*/
+    display: flex;            
+    text-align: center;
+}
+.menu li{
+    width: 100px;
+}
+.menu li a{
+    color: #20B2AA;
+    text-decoration: none;     /*下引線拿掉*/
+}
+.menu li a:hover{
+    font-size: 20px;
+    font-weight:bold;
+}
+
+
+
+.imgbanner{         /*圖片*/
+    background: url(../02_CSS/img90/banner.png) no-repeat;    /***背景貼到文字後面***/
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.imgbanner h2{
+    color: white;
+    font-size: 35px;
+    line-height: 50px;
+    padding: 30px 25px;
+
+    width: 100%;      /***把黑底覆蓋滿***/
+    background-color: rgba(0,0,0,0.15);     /***0.15為背景深淺***/
+}
+
+
+.content{           /*正中文字區域*/
+    margin-bottom: 20px;
+}
+.couese{
+    display: flex;
+    justify-content: space-around;
+}
+.couese-item{
+    width: 264px;
+    font-family: Microsoft JhengHei; 
+    padding: 18px;
+    box-shadow: 0 3px 2px rgb(206, 205, 205);      /***陰影產生=>X軸 Y軸 暈開程度  顏色***/
+    border-radius: 3px;         /***圓弧邊角***/
+}
+.couese-item img{
+    width: 100%;
+    height: 160px;
+}
+.couese-item h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.couese-item p{
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    word-break:break-all;      /***文字不自動強制換行***/
+}
+.couese-item h3{
+    line-height: 1.5;
+}
+.couese-item-li{
+    list-style-type: "\1F44D";   /*讚讚*/
+    line-height: 1.5;
+    padding-left: 20px;
+}
+.couese-item:hover{
+    background-color: wheat;
+}
+
+
+.content-table{             /* table的標題 */
+    margin-bottom: 50px;
+}
+.content-table h2{
+    font-size: 25px;
+    margin: 60px 0 30px 0;
+    font-weight: bold;
+    text-align: center;
+}
+.content-table table{      /*不包括h2 整塊table置中*/
+    width: 840px;
+    margin: 0 auto;
+}
+.content-table th{         /*第一行th的樣式*/
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.04);     /***淡黑底***/
+}
+.content-table th, td{     /*圖表的線條放在th, td*/
+    text-align: left;
+    font-size: 16px;
+    width: 250px;          
+    padding: 10px 30px 10px 20px;
+    border-top: 1px solid rgb(221, 218, 218);
+    border-bottom: 1px solid rgb(221, 218, 218);
+}
+.content-table h3{         /*改變重點顏色*/
+    color: #4bb37f;
+    font-weight: bold;
+}
+
+
+.content-form{
+    width: 100%;
+    height: 390px;
+    background: linear-gradient(#00674c,#00956f);   /***背景漸層配色***/
+    color: white;
+}
+.content-form h2{
+    font-size: 25px;
+    text-align: center;
+    padding: 30px 0 25px 0;
+    line-height: 1.4;
+    font-weight: bold;
+}
+.content-form form{
+    display: flex;
+}
+.form textarea{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.information{      
+    display: flex;
+    flex-direction: column;   /***個人資料區塊 從上到下排列***/
+    margin-left: 30px;
+    font-size: 15px;          
+}
+#name, #tel, #mail{
+    border: 1px solid grey;     /***強制邊線1px 才不會因加上標籤與圓弧效果變成太粗***/
+    width: 430px;
+    font-size: 15px;          /*提示區字體*/
+    border-radius: 5px;       
+
+    padding: 7px;             /*作用於格子內*/
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+.button{
+    display: flex;
+    justify-content: end;
+}
+#btn{
+    border: 1px solid #01b889;
+    color: white;
+    font-size: 15px;
+    padding: 5px 15px;
+    background:#01b889;
+    border-radius: 5px; 
+}
+
+
+.footer{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer img{
+    width: 171px;
+    height: 36px;
+    margin: 20px 0 20px 15px;
+}
+.footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+}
+.footer ul li{
+    float: left;
+}               
+.footer li span{
+    color:deeppink;
+}
